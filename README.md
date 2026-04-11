@@ -8,6 +8,19 @@
 
 必要な情報にアクセスするというよりは、探索を楽しんでもらう
 
+[homepage](https://keio-sf-society.github.io/Pages/)
+
+<!-- <aside class="sidebar">
+      <h2>Menu</h2>
+      <nav class="sidebar-nav">p
+        <ul>
+          <li><a href="#">ダッシュボード</a></li>
+          <li><a href="#">マイページ</a></li>
+          <li><a href="#">設定</a></li>
+        </ul>
+      </nav>
+    </aside> -->
+
 ```htm
 <!DOCTYPE html>
 <html lang="ja">

@@ -9,19 +9,7 @@
 
 <body>
 	<div id="header-area"></div>
-<div id="navi">
-<h2>navigation</h2>
-<ul>
-<li><a href="../about.html">当会について</a></li>
-<li class="current">刊行物</li>
-<li><a href="../reading/">読書会</a></li>
-<li><a href="../activity/">活動</a></li>
-<li class="out"><a href="http://d.hatena.ne.jp/keio_sf/">Blog</a></li>
-<li class="out"><a href="http://bbs6.sekkaku.net/bbs/keio.html">BBS</a></li>
-</ul>
-</div>
-
-<div id="main">
+  <main>
 
 <h2>刊行物</h2>
 
@@ -68,8 +56,15 @@
 </table>
 
 
-</div>
+</main>
 
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-area').innerHTML = data;
+    });
+</script>
 
 </body>
 </html>

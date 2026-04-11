@@ -1,25 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<title>慶應義塾大学SF研究会</title>
-<link rel="stylesheet" href="standard.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>慶應義塾大学SF研究会</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1><a href="./">慶應義塾大学SF研究会</a></h1>
-<div id="navi">
-<h2>navigation</h2>
-<ul>
-<li class="current">当会について</li>
-<li><a href="publications/">刊行物</a></li>
-<li><a href="reading/">読書会</a></li>
-<li><a href="activity/">活動</a></li>
-<li class="out"><a href="http://d.hatena.ne.jp/keio_sf/">Blog</a></li>
-<li class="out"><a href="http://bbs6.sekkaku.net/bbs/keio.html">BBS</a></li>
-</ul>
-</div>
+	<div id="header-area"></div>
 
 <div id="main"> 
 
@@ -59,5 +47,13 @@
 <p><a href="http://www.nicovideo.jp/watch/sm19414359">ニコニコ動画</a> <a href="http://youtu.be/7Ik_wCZvcDo">YouTube</a></p>
 
 </div>
+
+	<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-area').innerHTML = data;
+    });
+</script>
 </body>
 </html>

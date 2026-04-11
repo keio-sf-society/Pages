@@ -1,0 +1,147 @@
+{
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.tabSize": 2,
+	"editor.renderWhitespace": "all",
+	"editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "editor.accessibilitySupport": "off",
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showWords": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+	"explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+	"explorer.confirmPasteNative": false,
+  "files.autoSave": "afterDelay",
+	"outline.collapseItems": "alwaysCollapse",
+	// "task.autoDetect": "off",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.editorAssociations": {
+		"*.pdf": "latex-workshop-pdf-hook"
+	},
+  "workbench.colorCustomizations": {
+    // "editor.background": "#1e1e1e",
+    "editorWhitespace.foreground": "#ff0000ca",
+    // "sideBar.background": "#3434ba",
+    // "panel.background": "#020258",
+    // "titleBar.inactiveBackground": "#ffffff",
+    // "titleBar.inactiveForeground": "#000000",
+    // "titleBar.activeBackground": "#ffffff",
+    // "titleBar.activeForeground": "#000000",
+    // "statusBar.background": "#007acc",
+    "statusBar.background": "#2c8500",
+    "statusBar.foreground": "#ffffff",
+    // 検索窓の背景色
+    // "commandCenter.background": "#ff0000bb",
+    // 検索窓の文字色（前景）
+    // "commandCenter.foreground": "#ffffff",
+    // 検索窓の枠線の色
+    // "commandCenter.border": "#555555",
+    // マウスホバーした時の背景色
+    // "commandCenter.activeBackground": "#444444"
+  },
+  
+  "[cpp]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.suggest.insertMode": "replace",
+    // "editor.tabSize": 4
+  },
+
+  "[csv]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+    },
+		"editor.stickyScroll.enabled": true,
+  },
+
+	"[markdown]": {
+		"editor.unicodeHighlight.ambiguousCharacters": false,
+		"editor.unicodeHighlight.invisibleCharacters": false,
+		"editor.wordWrap": "on",
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "off",
+			"strings": "on"
+    }
+	},
+
+	"[python]": {
+    "editor.tabSize": 4,
+	},
+
+	"github.copilot.enable": {
+		"quarto": false,
+		"markdown": false,
+		"latex": false,
+		"plaintext": false,
+		"python": false,
+		"json": false,
+		"csv" : false,
+    "cpp": false
+	},
+  
+	"markdown.validate.enabled": true,
+	"markdown.updateLinksOnFileMove.enabled": "always",
+	"markdown.validate.referenceLinks.enabled": "ignore",
+
+  "python.createEnvironment.trigger": "off",
+  "python.analysis.typeCheckingMode": "standard",
+
+	// settings for each extension
+	// LaTeX Workshop
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "LuaLaTeX",
+			"tools": [
+				"lualatex",
+			]
+		},
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "lualatex",
+			"command": "lualatex",
+			"args": [
+				"-file-line-error",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-halt-on-error",
+				"%DOC%"
+			]
+		},
+	],
+	"latex-workshop.latex.search.rootFiles.include": [
+		"**/*.tex"
+	],
+	"latex-workshop.latex.search.rootFiles.exclude": [
+			"**/node_modules/**",
+			"**/.vscode/**"
+	],
+	"latex-workshop.latex.autoBuild.run": "never",
+	"latex-workshop.view.pdf.invert": 0.95,
+	// ダークテーマ使用時のPDF表示設定
+	// "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#1e1e1e", // PDFの背景色
+	// "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#d4d4d4", // PDFの文字色
+	// "latex-workshop.view.pdf.color.dark.backgroundColor": "#2d2d2d",     // ビューア全体の背景色
+	"latex-workshop.view.pdf.zoom": "page-width",
+
+	// csv-edit
+	"csv-edit.convertUrlsToLinkTags": true,
+	"csv-edit.readOption_hasHeader": "true",
+  "csv-edit.writeOption_hasHeader": "true",
+  "cSpell.userWords": [
+    "journaling",
+    "logit",
+    "multinomial",
+    "Probit",
+    "undominated"
+  ],
+
+	"C_Cpp.suggestSnippets": false,
+}

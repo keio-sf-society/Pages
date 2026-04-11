@@ -8,34 +8,8 @@
 </head>
 
 <body>
-	<header>
-		<!-- <nav aria-label="Breadcrumb" class="breadcrumb">
-    <ul>
-      <li class="nav-item"><a href="about.html">About</a></li>
-      <li>アーカイブ</li> </ul>
-  </nav> -->
 
-	<nav class="nav-container">
-    <ul class="nav-list">
-			      <li class="nav-item"><a href="index.html" class="nav-link">アイコン</a></li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="publications/" class="nav-link">Publications</a></li>
-      <li class="nav-item"><a href="#about" class="nav-link">会社概要</a></li>
-      <li class="nav-item"><a href="#services" class="nav-link">サービス</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link">お問い合わせ</a></li>
-    </ul>
-  </nav>
-
-  <!-- <nav class="main-nav">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#works">Works</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav> -->
-		
-	</header>
-
+<div id="header-area"></div>
 <!-- 
 	<h1>慶應義塾大学SF研究会</h1>
 		<p class="subtitle">慶應義塾大学SF研究会の公式ウェブサイトです。</p> -->
@@ -209,5 +183,14 @@
   </button>
 
 	<footer>© 2026 Sample Site</footer>
+
+	<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-area').innerHTML = data;
+    });
+</script>
 </body>
 </html>
+

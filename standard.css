@@ -1,117 +1,111 @@
-body{
-margin:2em;
-padding:0;
-background-color:white;
+:root {
+    --primary-color: #700;    /* 落ち着いた臙脂色 */
+    --accent-color: #003366;  /* 慶應ブルー（サブアクセント） */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: #f0f4f8;        /* 爽やかなナビ背景 */
+    --nav-hover: #e60012;     /* 慶應レッド */
 }
 
-h1{
-margin:0;
-padding:0 10px;
-color:#400;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8; /* 1.2emから1.8へ。圧倒的に読みやすくなります */
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-h1 a{
-color:#400;
-text-decoration:none;
+/* コンテナとしての役割を持たせる */
+#main, #navi, h1, address {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-h1 a:hover{
-color:red;
+/* Header */
+h1 {
+    margin: 40px auto 20px;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
 }
 
-/*navigation*/
-#navi h2{
-display:none;
+h1 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-#navi ul{
-margin:5px 0;
-padding:0;
+h1 a:hover {
+    color: var(--nav-hover);
 }
 
-#navi ul li{
-margin:0;
-padding:5px 10px;
-list-style:none;
-display:inline;
-background-color:#7bf;
+/* Navigation: タブ形式からモダンなメニューへ */
+#navi ul {
+    margin: 20px 0;
+    padding: 0;
+    display: flex; /* 横並びはflexboxが現代標準 */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#navi ul li.current{
-color:black;
-background-color:#def;
+#navi ul li {
+    list-style: none;
+    background-color: var(--nav-bg);
+    border-radius: 4px; /* 少し角を丸める */
+    transition: 0.3s;
 }
 
-#navi a:link{
-color:black;
-text-decoration:none;
-}
-#navi a:visited{
-color:#222;
-text-decoration:none;
-}
-#navi a:hover{
-color:red;
+#navi ul li.current {
+    background-color: var(--primary-color);
 }
 
-/*main*/
-#main{
-padding:10px;
+#navi ul li.current a {
+    color: white !important;
 }
 
-#main h2{
-display:none;
+#navi a {
+    display: block;
+    padding: 10px 20px;
+    color: #444;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
-#main h3{
-background-color:#ffc;
+#navi a:hover {
+    color: var(--nav-hover);
 }
 
-#main p{
-line-height:1.2em;
+/* Main Content */
+#main h3 {
+    background-color: #f8f8f0; /* きつい黄色(#ffc)を避けて上品なオフホワイトに */
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-color); /* 左線でアクセント */
+    margin: 2em 0 1em;
 }
 
-#main ul{
-padding:0;
+/* Table: スマホで見切れない工夫 */
+table#pub {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
 }
 
-#main li{
-list-style:none;
+#pub td {
+    border-bottom: 1px solid #eee; /* 枠線を減らしてスッキリ */
+    padding: 12px 15px;
 }
 
-/*only for index.html*/
-h3.twitter{
-display:none;
-}
-
-address{
-clear:right;
-margin:0;
-padding:0 1em;
-font-size:50%;
-font-style:normal;
-color:#999;
-}
-
-/*only for about.html*/
-#main dt{
-clear:left;
-float:left;
-}
-
-#main dd{
-margin-left:4em;
-}
-
-/*only for publications/index.html*/
-table#pub{
-}
-
-#pub td{
-border:1px solid #eee;
-padding:0.4em 1em;
-}
-
-td.pages{
-text-align:right;
+/* Footer */
+address {
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #888;
+    font-size: 0.75rem;
 }

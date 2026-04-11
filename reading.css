@@ -1,0 +1,30 @@
+body{
+	line-height:1.4em;
+	margin:2em;
+}
+h1{
+	text-align:center;
+	font-size:130%;
+	margin:3em 0em;
+	text-shadow:gray 0 0 2px;
+}
+h2{
+	font-size:120%;
+	margin-top:2em;
+	border-bottom:gray thin solid;
+}
+h3{
+	font-size:110%;
+	margin-top:2em;
+}
+h4{font-size:100%;}
+hr{margin-top:2em;}
+blockquote{padding:0.2em;background-color:#f8f8f8;}
+blockquote p{margin:0.5em 0;}
+p.cite{text-align:right;}
+.abr{
+	color:dimgray;
+	padding:0.2em;
+	font-size:90%;
+	background-color:#f8f8f8;
+}

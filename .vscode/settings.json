@@ -83,7 +83,9 @@
 		"python": false,
 		"json": false,
 		"csv" : false,
-    "cpp": false
+    "cpp": false,
+		"html": false,
+		"css": false,
 	},
   
 	"markdown.validate.enabled": true,

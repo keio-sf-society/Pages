@@ -8,6 +8,8 @@
 
 必要な情報にアクセスするというよりは、探索を楽しんでもらう
 
+[homepage](https://keio-sf-society.github.io/Pages/)
+
 ```htm
 <!DOCTYPE html>
 <html lang="ja">

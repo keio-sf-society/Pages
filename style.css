@@ -55,10 +55,37 @@ h1 {
 	margin-bottom: 0.5rem;
 }
 
+h2 {
+	margin-top: 0;
+	color: var(--accent-color);
+	font-size: 1.25rem;
+}
+
         .subtitle {
             color: var(--secondary-text);
             font-size: 1.1rem;
         }
+
+.tile-horizontal {
+	display: flex;
+	overflow-x: auto;
+}
+
+/* 親コンテナ */
+.scroll-container {
+  display: flex;            /* 子要素を横並びにする */
+  overflow-x: auto;         /* 横方向にスクロール可能にする */
+  gap: 20px;                /* カード同士の隙間（marginの代わり） */
+  padding: 20px;            /* コンテナの内側に余白を作る */
+  scroll-snap-type: x mandatory; /* スクロール時にピタッと止まる設定（推奨） */
+  -ms-overflow-style: none; /* IE, Edge用：スクロールバー非表示 */
+  scrollbar-width: none;    /* Firefox用：スクロールバー非表示 */
+}
+
+/* スクロールバーを非表示にする（Chrome, Safari） */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
 
         /* 2. Bento Grid（弁当グリッド）レイアウト */
         .container {
@@ -88,11 +115,7 @@ h1 {
             grid-column: span 2;
         }
 
-        h2 {
-            margin-top: 0;
-            color: var(--accent-color);
-            font-size: 1.25rem;
-        }
+    
 
         .tag {
             display: inline-block;

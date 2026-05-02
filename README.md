@@ -1,5 +1,79 @@
 # Pages
 
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/i
+nstall.sh
+
+```
+
+**情報源:**
+*   Node.js 公式サイト (nodejs.org)
+*   nvm GitHub リポジトリ (github.com/nvm-sh/nvm)
+*   NodeSource ディストリビューションガイド
+
+> **注意:** 質問に対する答えが見つからない場合は正直に申告するよう承っておりますが、今回はUbuntuにNode.jsとnpmをインストールする方法はいくつかありますが、最も推奨されるのはバージョン管理ツール（**nvm**）を使用する方法、または公式のリポジトリから安定版を導入する方法です。
+
+---
+
+## 1. 推奨：nvm (Node Version Manager) を使う方法
+複数のプロジェクトで異なるバージョンを使い分けたい場合や、権限トラブルを避けたい場合に最も適しています。K
+
+1.  **インストールスクリプトの実行**
+    ```bash
+    curl -o- [https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh) | bash
+    ```
+2.  **設定の反映**
+    端末を再起動するか、以下のコマンドを実行します。
+    ```bash
+    source ~/.bashrc
+    ```
+3.  **Node.jsのインストール**
+    最新のLTS（推奨版）をインストールします。npmも自動的に同梱されます。
+    ```bash
+    nvm install --lts
+    ```
+
+---
+
+## 2. 標準的な方法：Ubuntu公式リポジトリを使う方法
+手軽ですが、Node.jsのバージョンが古い場合があります。
+```bash
+sudo apt update
+sudo apt install nodejs npm
+```
+
+---
+
+## 3. 特定の最新版を入れたい場合：NodeSourceを使う方法
+最新のメジャーバージョン（例：Node.js 20.xなど）を直接指定して導入できます。
+
+1.  **セットアップスクリプトの実行**（Node.js 20の場合）
+    ```bash
+    curl -fsSL [https://deb.nodesource.com/setup_20.x](https://deb.nodesource.com/setup_20.x) | sudo -E bash -
+    ```
+2.  **インストール**
+    ```bash
+    sudo apt-get install -y nodejs
+    ```
+
+---
+
+## インストールの確認
+正しくインストールされたか、バージョンを表示して確認してください。
+
+```bash
+node -v
+npm -v
+```
+
+**情報源:**
+*   Node.js 公式サイト (nodejs.org)
+*   nvm GitHub リポジトリ (github.com/nvm-sh/nvm)
+*   NodeSource ディストリビューションガイド
+
+> **注意:** 質問に対する答えが見つからない場合は正直に申告するよう承っておりますが、今回は公式ドキュメントおよび標準的な手順に基づき回答いたしました。もしインストール中にエラーが出る場合は、エラーメッセージを教えていただければさらに詳しくお調べします。
+```
+
 目指すホームページ
 
 見やすい、使いやすい、分かりやすい、必要な情報にアクセスしやすい
